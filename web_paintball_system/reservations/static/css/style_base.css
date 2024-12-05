@@ -1,0 +1,109 @@
+/* Pasek z informacjami na górze strony */
+.top-bar {
+    background-color: #006400; /* Zielone tło */
+    color: white;
+    font-size: 12px;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.top-bar-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 równe kolumny */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.top-bar-item {
+    text-align: center;
+    white-space: nowrap; /* Zapobiega łamaniu się tekstu */
+    overflow: hidden; /* Ukrywa nadmiar tekstu */
+    text-overflow: ellipsis; /* Dodaje "..." dla zbyt długich tekstów */
+}
+
+@media (max-width: 768px) {
+    .top-bar-container {
+        grid-template-columns: 1fr; /* Po jednej kolumnie na małych ekranach */
+    }
+
+    .top-bar-item {
+        padding: 5px 0;
+    }
+}
+
+
+/* style do przycików url */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.header {
+    background-color: #006400;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    height: 90px;
+}
+
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav li {
+    margin-left: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+.paintballDescription {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.8;
+    color: #333;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer.footer {
+    background-color: #006400;
+    color : white;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;}
+
+

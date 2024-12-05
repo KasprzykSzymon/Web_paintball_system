@@ -1,0 +1,29 @@
+/* Full-Width Image */
+.full-width-image {
+    display: flex;
+    justify-content: center; /* Wyśrodkowanie poziome */
+    align-items: center;     /* Wyśrodkowanie pionowe, jeżeli zdjęcie ma mniejszą wysokość */
+    margin: 20px 0;          /* Dodatkowy odstęp wokół obrazu */
+}
+
+.full-width-image img {
+    width: 10%;     /* Zmniejsza rozmiar zdjęcia o 10% */
+    height: auto;   /* Zachowuje proporcje zdjęcia */
+    min-height: 420px;
+    background-size: cover;
+    background-repeat: repeat;
+    margin-top:20px;
+    scroll-behavior: smooth;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+

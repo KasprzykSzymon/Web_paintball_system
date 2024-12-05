@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paintball Bilcza</title>
+    <link rel="stylesheet" href="{% static 'css/style_base.css' %}">
+</head>
+<body>
+     <!-- Górny pasek z informacjami -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-item">Paintball-Bilcza</div>
+            <div class="top-bar-item">📞 TELEFON: (+48) 123456789</div>
+            <div class="top-bar-item">📧 E-MAIL: administracja@paintball-bilcza.pl</div>
+            <div class="top-bar-item">Kryształowa 12, 26-026 Morawica</div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="{% url 'home' %}"></a>
+                    <img src="{% static 'images/logo1.png' %}" alt="Pole Paintball">
+                    <img src="{% static 'images/logo2.png' %}" alt="Pole Paintball">
+                    <img src="{% static 'images/logo1.png' %}" alt="Pole Paintball">
+                </a>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="{% url 'home' %}">Strona Główna</a></li>
+                    <li><a href="{% url 'about' %}">O nas</a></li>
+                    <li><a href="{% url 'open_field' %}">Własne Pole Paintball</a></li>
+                    <li><a href="{% url 'requirements' %}">Co Potrzeba</a></li>
+                    <li><a href="{% url 'contact' %}">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="content">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer class="footer">
+        <div class="row">
+            <div class=" footer-column footer-column-1 col-md-3" data-loc="1-1"> </div>
+                <div id="custom_html-6" class="widget_text widget didget_custom_html">
+                    <h3 class="widget-title ">Dane kontaktowe:</h3>
+                    <div class="textwidget custom-html-widget">
+                        <strong>Adress:</strong>
+                        " "
+                        <br>
+                        <strong>Email:</strong>
+                        " "
+                        <br>
+                        <strong>Telefon:</strong>
+                        " (48) 123456789 "
+                        <br>
+                    </div>
+                </div>
+            <div class=" footer-column footer-column-2 col-md-3" data-loc="1-2"> </div>
+                <div id="media" class="widget_text widget didget_custom_html">
+                    <h3 class="widget-title ">Dane kontaktowe:</h3>
+                    <div class="textwidget custom-html-widget">
+                        <strong>Adress:</strong>
+                        " "
+                        <br>
+                        <strong>Email:</strong>
+                        " "
+                        <br>
+                        <strong>Telefon:</strong>
+                        " (48) 123456789 "
+                        <br>
+                    </div>
+                </div>
+        </div>
+        <br>
+        <p>&copy; 2024 Pole Paintball | Wszystkie prawa zastrzeżone</p>
+    </footer>
+</body>
+</html>

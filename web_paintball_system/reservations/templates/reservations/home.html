@@ -1,0 +1,22 @@
+{% extends 'reservations/base.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/style_base.css' %}">
+    <!-- Full-Width Image -->
+    <section class="full-width-image">
+        <img src="{% static 'images/paintball_bilcza_image.png' %}" alt="Full Width Image" class="center">
+    </section>
+    <h1>Kontakt</h1>
+    <p>Skontaktuj się z nami, aby uzyskać więcej informacji!</p>
+{% endblock %}
+
+
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

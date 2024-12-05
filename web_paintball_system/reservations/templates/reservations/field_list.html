@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/stylesHomePage.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap" rel="stylesheet">
+    <title>Strona hotelu x</title>
+</head>
+<body>
+    <div class="naglowek">
+        <div class="lewoNaglowek">
+            <p>Last Minute !</p>
+            <p>Wydarzenia w hotelu</p>
+        </div>
+        <div class="zdjecie">
+            <img src="{% static 'images/logoPNG.png' %}" alt="Logo Hotelu">
+        </div>
+        <div class="prawoNaglowek">
+            <p style="left: 15px;">Kontakt</p>
+            <p>Zaloguj się</p>
+        </div>
+    </div>
+    <h1>Witamy w hotelu Scyzoryk</h1>
+    <p>U nas zaśniesz spokojnie</p>
+    <div class="formularze-container">
+        <div class="formularz1">
+            <span>Wybierz swoją datę przyjazdu</span><br>
+            <input type="date">
+        </div>
+        <div class="formularz2">
+            <span>Wybierz swoją datę odjazdu</span><br>
+            <input type="date">
+        </div>
+        <div class="select1-dorosli">
+            <span>Liczba dorosłych:</span><br>
+            <select>
+                {% for i in range_10x %}
+                <option>{{ i }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="select1-dzieci">
+            <span>Liczba dzieci:</span><br>
+            <select>
+                {% for i in range_10 %}
+                <option>{{ i }}</option>
+                {% endfor %}
+            </select>
+        </div><br>
+        <div class="guzik-container">
+            <button type="button" class="guzik" onclick={search}>Szukaj pokoju</button>
+        </div>
+    </div>
+
+    <h1>Available Fields</h1>
+    <ul>
+        {% for field in fields %}
+            <li>
+                <strong>{{ field.name }}</strong> - {{ field.location }}
+                <a href="{% url 'reservations:create_reservation' field.id %}">Reserve</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
